@@ -7,15 +7,9 @@
 (newline)
 
 (define v (make-vector 45 (- 1)))
-; (vector-set! v 0 0)
-; (vector-set! v 1 1)
 (define (fibonacci n)
     (define n-1 (- n 1))
     (define n-2 (- n 2))
-
-    ; (display "n=")
-    ; (display n)
-    ; (newline)
 
     (if (> n 1)
         (if (= (vector-ref v n-1) (- 1))
