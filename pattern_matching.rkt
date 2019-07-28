@@ -7,3 +7,6 @@
     ))
 
 (display   deriv-rules)
+
+(define dsimp
+  (simplifier deriv-rules))
