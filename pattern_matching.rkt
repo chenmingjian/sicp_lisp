@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 (define deriv-rules
   '(
@@ -8,5 +8,13 @@
 
 (display   deriv-rules)
 
-(define dsimp
-  (simplifier deriv-rules))
+; (define dsimp
+;   (simplifier deriv-rules))
+
+
+; (define (match pat exp dict)
+;   (cond ((eq? dict 'failed) 'failed)
+;         ((atom? pat)
+;           )))
+
+; (+ (* (?x) (?y)) (?y))
