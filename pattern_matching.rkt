@@ -18,3 +18,27 @@
 ;           )))
 
 ; (+ (* (?x) (?y)) (?y))
+
+(define (simplify-exp exp)
+  (try-rules
+   (if (compoind? exp)
+       (map simplify-exp exp)
+       exp)))
+
+(define (try-rules exp)
+  (define (scan rules)
+    ***)
+  (scan the-rules))
+
+(define (scan rules)
+  (if (null? rules)
+      exp
+      (let ((dict (match (pattern (car rules))
+                    exp
+                    (empty-dictionary))))
+        (if (eq? dict 'failed)
+            (scan (cdr rules))
+            (simplify-exp
+             (instantiatie
+              (skeleton (car rules))
+              dict))))))
