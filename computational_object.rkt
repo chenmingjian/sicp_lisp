@@ -22,19 +22,27 @@
 (define (cdr x )
   (x  (lambda (a d) d)))
 
-(display (car(cons 1 2)))
-
+;(display (car(cons 1 2)))
 ; assignmentm ethod
-(define (cons x y)
+(define (cons_2 x y)
   (lambda (m)
     (m x
        y
        (lambda (n) (set! x n))
        (lambda (n) (set! y n)))))
-(define (car x)
-  (x （lambda (a d sa sd) a))
+(define (car_2 x)
+  (x (lambda (a d sa sd) a)))
 
-(define (cdr x)
-  (x （lambda (a d sa sd) d))
+(define (cdr_2 x)
+  (x (lambda (a d sa sd) d)))
+(define (set-car! x y)
+  (x (lambda (a d sa sd) (sa y))))
+(define (set-cdr! x y)
+  (x (lambda (a d sa sd) (sd y))))
+
+(define tmp (cons_2 1 2))
+(set-car! tmp 2)
+(display (car_2 tmp))
+
 
 
