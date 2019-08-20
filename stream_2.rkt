@@ -1,5 +1,6 @@
 #lang sicp
 
+
 (define (nth-stream n s)
   (if (= n 0)
       (head s)
